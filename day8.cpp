@@ -15,15 +15,18 @@ int main(){
 		mymap.insert(pair<string,int>(name,number));
 	}
 	
-	for(i=0; i<n; i++){
-		scanf("%s", fnd);
+	i=0;
+	while(cin>>fnd){
+		
 		it=mymap.find(fnd);
 		if(it!=mymap.end()){
-		//for(it=mymap.begin(); it!=mymap.end(); it++)
+
 			cout<<it->first<<"="<<it->second<<endl;
 		}else{
 			printf("Not found\n");
 			}
+			i++;
+			if(i==n) break;
 	}
 	return 0;
 }
